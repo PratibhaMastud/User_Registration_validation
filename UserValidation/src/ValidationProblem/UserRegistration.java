@@ -8,23 +8,22 @@ public class UserRegistration {
 			
 			int i=0;
 
-			public void enterEmail() {
+			public void enterMobileNumber() {
 
 				while(i != 1) {
 					
-					System.out.println("Enter Email Address ");
+					System.out.println("Enter Mobile Number in Predefined Format");
 					
-					String email = userInput.nextLine();
+					String mobileNo = userInput.nextLine();
 					
-					String namePattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
-
-				if( email.matches(namePattern) ){
+					String namePattern = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
+				if( mobileNo.matches(namePattern) ){
 						
-						System.out.println("Email  is valid");
+						System.out.println("Mobile Number  is valid");
 						i = 1;
 				}else {
 						
-					System.out.println("Please Enter valid Email in this form - abc.xyz@bl.co.in"); 
+					System.out.println("Please Enter valid Mobile Number in this form - 91 9983243552"); 
 					}
 				}
 			}
@@ -33,7 +32,7 @@ public class UserRegistration {
 				
 				UserRegistration userRegistration = new UserRegistration();
 				
-				userRegistration.enterEmail();
+				userRegistration.enterMobileNumber();
 			}
 
 		
