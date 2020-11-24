@@ -8,11 +8,11 @@ public class UserRegistration {
 			
 			int i=0;
 
-			public void enterFastName() {
+			public void enterLastName() {
 
 				while(i != 1) {
 					
-					System.out.println("Enter First Name ");
+					System.out.println("Enter Last Name ");
 					
 					String firstName = userInput.nextLine();
 					
@@ -20,11 +20,11 @@ public class UserRegistration {
 
 				if( firstName.matches(namePattern) ){
 						
-						System.out.println("First name is valid");
+						System.out.println("Last name is valid");
 						i = 1;
 				}else {
 						
-					System.out.println("Please Enter valid First Name starting with capital letter and should have minimum 3 Character in the string"); 
+					System.out.println("Please Enter valid Last Name starting with capital letter and should have minimum 3 Character in the string"); 
 					}
 				}
 			}
@@ -33,7 +33,7 @@ public class UserRegistration {
 				
 				UserRegistration userRegistration = new UserRegistration();
 				
-				userRegistration.enterFastName();
+				userRegistration.enterLastName();
 			}
 
 		
