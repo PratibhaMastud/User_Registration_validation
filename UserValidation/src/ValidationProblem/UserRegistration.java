@@ -8,22 +8,22 @@ public class UserRegistration {
 			
 			int i=0;
 
-			public void enterMobileNumber() {
+			public void enterPassword() {
 
 				while(i != 1) {
 					
-					System.out.println("Enter Mobile Number in Predefined Format");
+					System.out.println("Enter Password :");
 					
-					String mobileNo = userInput.nextLine();
+					String pass = userInput.nextLine();
 					
-					String namePattern = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
-				if( mobileNo.matches(namePattern) ){
+					String namePattern = "[A-Za-z0-9]{8}";
+				if( pass.matches(namePattern) ){
 						
-						System.out.println("Mobile Number  is valid");
+						System.out.println("Password is valid");
 						i = 1;
 				}else {
 						
-					System.out.println("Please Enter valid Mobile Number in this form - 91 9983243552"); 
+					System.out.println("Please Enter valid Password whic is minimum have 8 character"); 
 					}
 				}
 			}
@@ -32,7 +32,7 @@ public class UserRegistration {
 				
 				UserRegistration userRegistration = new UserRegistration();
 				
-				userRegistration.enterMobileNumber();
+				userRegistration.enterPassword();
 			}
 
 		
