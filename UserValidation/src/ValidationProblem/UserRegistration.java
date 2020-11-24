@@ -8,23 +8,23 @@ public class UserRegistration {
 			
 			int i=0;
 
-			public void enterLastName() {
+			public void enterEmail() {
 
 				while(i != 1) {
 					
-					System.out.println("Enter Last Name ");
+					System.out.println("Enter Email Address ");
 					
-					String firstName = userInput.nextLine();
+					String email = userInput.nextLine();
 					
-					String namePattern = "^[A-Z]{1}[a-z]{2,}$";
+					String namePattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
 
-				if( firstName.matches(namePattern) ){
+				if( email.matches(namePattern) ){
 						
-						System.out.println("Last name is valid");
+						System.out.println("Email  is valid");
 						i = 1;
 				}else {
 						
-					System.out.println("Please Enter valid Last Name starting with capital letter and should have minimum 3 Character in the string"); 
+					System.out.println("Please Enter valid Email in this form - abc.xyz@bl.co.in"); 
 					}
 				}
 			}
@@ -33,7 +33,7 @@ public class UserRegistration {
 				
 				UserRegistration userRegistration = new UserRegistration();
 				
-				userRegistration.enterLastName();
+				userRegistration.enterEmail();
 			}
 
 		
