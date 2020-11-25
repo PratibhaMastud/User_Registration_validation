@@ -16,7 +16,7 @@ public class UserRegistration {
 					
 					String pass = userInput.nextLine();
 					
-					String namePattern = "^[A-Z]{1}[a-z0-9]{7}$";
+					String namePattern = "(^[0-9]{1}[A-Za-z0-9]{7})$";
 				if( pass.matches(namePattern) ){
 						
 						System.out.println("Password is valid");
